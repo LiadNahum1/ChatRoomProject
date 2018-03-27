@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ChatRoomProject.LogicLayer;
+using ChatRoomProject.CommunicationLayer;
 
 namespace ChatRoomProject.PresentationLayer
 {
@@ -94,7 +95,7 @@ namespace ChatRoomProject.PresentationLayer
         public void AfterLogin()
         {
 
-            List<Message> Last20Messages = chatroom.DisplayNMessages(20); // display 20 last messages
+            List<IMessage> Last20Messages = chatroom.DisplayNMessages(20); // display 20 last messages
             for (int i = 0; i < Last20Messages.Capacity; i++)
             {
                 Console.WriteLine(Last20Messages.ElementAt(i));
@@ -130,7 +131,7 @@ namespace ChatRoomProject.PresentationLayer
         }
         public void Display(int number)
         {
-            List<Message> messages = chatroom.DisplayNMessages(number);
+            List<IMessage> messages = chatroom.DisplayNMessages(number);
             foreach (Message msg in messages)
             {
                 Console.WriteLine(msg.ToString());

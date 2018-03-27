@@ -12,7 +12,7 @@ namespace ChatRoomProject.PersistentLayer
         public static void SaveToFile(string nickname, string groupId)
         {
             string startupPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
-            startupPath += "\\DataUsers.txt";
+            startupPath += "\\PersistentLayer\\DataUsers.txt";
             using (StreamWriter sw = File.AppendText(startupPath))
             {
                 sw.WriteLine(groupId + "," + nickname);
@@ -25,7 +25,7 @@ namespace ChatRoomProject.PersistentLayer
         {
             List<string> userList = new List<string>();
             string startupPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
-            startupPath += "\\DataUsers.txt";
+            startupPath += "\\PersistentLayer\\DataUsers.txt";
             var lines = System.IO.File.ReadAllLines(startupPath);
             foreach (string item in lines)
             {

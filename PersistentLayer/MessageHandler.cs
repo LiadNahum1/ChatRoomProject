@@ -12,7 +12,7 @@ namespace ChatRoomProject.PersistentLayer
         public static void SaveToFile(Guid id, string nickname, string groupID, DateTime date, string messageContent)
         {
             string startupPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
-            startupPath += "\\DataMessages.txt";
+            startupPath += "\\PersistentLayer\\DataMessages.txt";
             using (StreamWriter sw = File.AppendText(startupPath))
             {
                 sw.WriteLine(id.ToString() + "," + nickname + "," + groupID + "," + date.ToString() + "," + messageContent );
@@ -22,8 +22,8 @@ namespace ChatRoomProject.PersistentLayer
         public static List<String> RestoreMessages()
         {
             List<string> messageList = new List<string>();
-            string startupPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
-            startupPath += "\\PersistentLayer" + "\\DataMessages.txt";
+            string startupPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
+            startupPath += "\\PersistentLayer\\DataMessages.txt";
             var lines = System.IO.File.ReadAllLines(startupPath);
             foreach (string item in lines)
             {

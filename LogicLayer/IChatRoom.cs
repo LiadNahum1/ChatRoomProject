@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ChatRoomProject.CommunicationLayer;
 
 namespace ChatRoomProject.LogicLayer
 {
@@ -15,7 +16,7 @@ namespace ChatRoomProject.LogicLayer
         bool Login(string groupId, string nickname);
         void Logout();
         void RetrieveNMessages(int number);
-        List<Message> DisplayNMessages(int number);
+        List<IMessage> DisplayNMessages(int number);
         void Send(string messageContent);
 
     }
