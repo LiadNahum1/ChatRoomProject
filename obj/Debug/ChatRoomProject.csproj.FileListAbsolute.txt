@@ -1,0 +1,2 @@
+D:\year1\Sim2\IntroToSoftwareE\Chat2\ChatRoomProject\obj\Debug\ChatRoomProject.csprojResolveAssemblyReference.cache
+D:\year1\Sim2\IntroToSoftwareE\Chat2\ChatRoomProject\obj\Debug\ChatRoomProject.csproj.CoreCompileInputs.cache
